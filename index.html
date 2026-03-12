@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Merk Produkter – Värme, Sanitet & Vattenrening | Kent Dahlqvist</title>
+<meta name="description" content="Merk Produkter erbjuder professionell installation, renovering och rådgivning inom värme, sanitet och vattenrening i Västra Götaland. Kontakta Kent Dahlqvist.">
+<meta name="keywords" content="vattenfilter, pumpar, värmepumpar, vedanläggningar, sanitet, vattenrening, Borgstena, Västra Götaland">
+<meta name="author" content="Kent Dahlqvist">
+<meta property="og:title" content="Merk Produkter – Värme, Sanitet & Vattenrening">
+<meta property="og:description" content="Professionell installation, renovering och rådgivning inom värme, sanitet och vattenrening i Västra Götaland.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="Kent allt.png">
+<link rel="icon" type="image/png" href="Kent allt.png">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600;700&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+
+:root{
+  --navy:#1e2d40;
+  --slate:#3d5166;
+  --gold:#a8894a;
+  --sand:#e8e0d0;
+  --cream:#f5f2ec;
+  --white:#ffffff;
+  --text:#2c2c2c;
+  --muted:#6b7280;
+  --border:#d4cfc6;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+
+body{
+  font-family:'Source Sans 3',sans-serif;
+  background:var(--cream);
+  color:var(--text);
+  line-height:1.7;
+}
+
+.page{display:none}
+.page.active{display:block}
+
+/* HEADER */
+header{
+  background:var(--navy);
+  position:sticky;
+  top:0;
+  z-index:100;
+  box-shadow:0 2px 12px rgba(0,0,0,0.25);
+}
+.header-inner{
+  max-width:1100px;
+  margin:auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:16px 32px;
+}
+.logo-area{
+  display:flex;
+  align-items:center;
+  gap:16px;
+  cursor:pointer;
+  text-decoration:none;
+}
+.logo-mark{ height:64px; width:auto; }
+.logo-text{ font-family:'Oswald',sans-serif; font-size:20px; color:white; font-weight:700; letter-spacing:1px; text-transform:uppercase; }
+.logo-text span{
+  display:block;
+  font-size:11px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  color:var(--sand);
+  font-weight:600;
+}
+nav{ display:flex; gap:6px; }
+nav a{
+  color:var(--sand);
+  text-decoration:none;
+  font-size:13px;
+  font-weight:600;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  padding:10px 16px;
+  border-radius:4px;
+  cursor:pointer;
+}
+nav a:hover, nav a.active{ background:var(--gold); color:white; }
+
+/* HERO */
+.hero{
+  position:relative;
+  min-height:520px;
+  display:flex;
+  align-items:flex-end;
+  justify-content:center;
+  text-align:center;
+  overflow:hidden;
+  background:var(--cream);
+  padding:40px 32px 60px;
+}
+.hero-bg{
+  position:absolute;
+  inset:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.hero-bg img{
+  width:80%;
+  max-width:750px;
+  opacity:0.85;
+  filter:grayscale(100%);
+  mix-blend-mode:multiply;
+  pointer-events:none;
+  user-select:none;
+}
+.hero-content{
+  position:relative;
+  z-index:2;
+}
+.hero h1{
+  font-family:'Oswald',sans-serif;
+  font-size:56px;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:3px;
+  color:var(--navy);
+  margin-bottom:10px;
+  line-height:1.1;
+}
+.hero-tagline{
+  letter-spacing:3px;
+  text-transform:uppercase;
+  color:var(--gold);
+  margin-bottom:16px;
+  font-size:13px;
+  font-weight:600;
+}
+.hero-sub{
+  max-width:480px;
+  margin:0 auto 40px;
+  color:var(--muted);
+  font-size:16px;
+}
+.hero-buttons{ display:flex; gap:16px; justify-content:center; flex-wrap:wrap; }
+
+/* KNAPPAR */
+.btn{
+  background:var(--gold);
+  color:white;
+  border:none;
+  padding:14px 30px;
+  border-radius:4px;
+  cursor:pointer;
+  font-weight:600;
+  font-family:'Source Sans 3',sans-serif;
+  font-size:15px;
+  transition:background 0.2s;
+}
+.btn:hover{ background:#8f7338; }
+.btn-secondary{
+  background:white;
+  color:var(--navy);
+  border:2px solid var(--navy);
+  padding:12px 28px;
+  border-radius:4px;
+  cursor:pointer;
+  font-weight:600;
+  font-family:'Source Sans 3',sans-serif;
+  font-size:15px;
+  transition:all 0.2s;
+}
+.btn-secondary:hover{ background:var(--navy); color:white; }
+.btn-outline{
+  background:transparent;
+  color:white;
+  border:2px solid rgba(255,255,255,0.5);
+  padding:12px 28px;
+  border-radius:4px;
+  cursor:pointer;
+  font-weight:600;
+  font-family:'Source Sans 3',sans-serif;
+  font-size:15px;
+  transition:border-color 0.2s;
+}
+.btn-outline:hover{ border-color:white; }
+
+/* SEKTIONER */
+.section{ padding:70px 32px; }
+.container{ max-width:1100px; margin:auto; }
+.section-title{ font-family:'Oswald',sans-serif; font-size:32px; font-weight:700; text-transform:uppercase; letter-spacing:1px; margin-bottom:8px; color:var(--navy); }
+.divider{ width:48px; height:3px; background:var(--gold); margin:14px 0 36px; }
+
+/* PAGE BANNER */
+.page-banner{
+  background:linear-gradient(135deg,var(--navy),var(--slate));
+  color:white;
+  padding:52px 32px;
+}
+.page-banner h1{ font-family:'Oswald',sans-serif; font-size:36px; font-weight:700; text-transform:uppercase; letter-spacing:1px; }
+.page-banner p{ color:rgba(255,255,255,0.65); margin-top:8px; }
+
+/* STARTSIDA KORT */
+.intro-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:28px; }
+.intro-card{
+  background:white;
+  border:1px solid var(--border);
+  padding:30px;
+  border-top:4px solid var(--gold);
+  border-radius:3px;
+}
+.intro-card h3{ font-family:'Oswald',sans-serif; font-size:20px; color:var(--navy); margin-bottom:10px; text-transform:uppercase; letter-spacing:1px; }
+.intro-card p{ color:var(--muted); font-size:14px; }
+
+/* TJÄNSTER */
+.services-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:28px; }
+.service-card{
+  background:white;
+  border:1px solid var(--border);
+  padding:36px 28px;
+  border-top:4px solid var(--gold);
+  border-radius:3px;
+}
+.service-icon{
+  width:52px; height:52px;
+  background:var(--navy);
+  border-radius:4px;
+  display:flex; align-items:center; justify-content:center;
+  font-size:22px;
+  margin-bottom:20px;
+  color:var(--gold);
+  font-family:'Oswald',sans-serif;
+  font-weight:700;
+  letter-spacing:1px;
+}
+.service-card h3{ font-family:'Oswald',sans-serif; font-size:22px; color:var(--navy); margin-bottom:12px; text-transform:uppercase; letter-spacing:1px; }
+.service-card p{ color:var(--muted); font-size:14px; line-height:1.8; }
+
+/* PRODUKTER */
+.products-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:24px; margin-bottom:50px; }
+.product-card{
+  background:white;
+  border:1px solid var(--border);
+  padding:28px 20px;
+  border-radius:3px;
+  text-align:center;
+}
+.product-icon{
+  width:48px; height:48px;
+  background:var(--navy);
+  border-radius:4px;
+  display:flex; align-items:center; justify-content:center;
+  font-family:'Oswald',sans-serif;
+  font-size:11px;
+  font-weight:700;
+  color:var(--gold);
+  letter-spacing:1px;
+  text-transform:uppercase;
+  margin:0 auto 14px;
+}
+.product-card h3{ font-family:'Oswald',sans-serif; font-size:17px; color:var(--navy); text-transform:uppercase; letter-spacing:1px; }
+.partner-links{ display:flex; gap:20px; flex-wrap:wrap; }
+.partner-link{
+  display:inline-block;
+  background:white;
+  border:1px solid var(--border);
+  padding:14px 28px;
+  border-radius:3px;
+  text-decoration:none;
+  color:var(--navy);
+  font-weight:600;
+  font-size:14px;
+  transition:border-color 0.2s, color 0.2s;
+}
+.partner-link span{ display:block; font-size:11px; font-weight:300; color:var(--muted); text-transform:uppercase; letter-spacing:1px; margin-top:2px; }
+.partner-link:hover{ border-color:var(--gold); color:var(--gold); }
+
+/* OM FÖRETAGET */
+.about-grid{ display:grid; grid-template-columns:3fr 2fr; gap:60px; align-items:start; }
+.about-text p{ color:var(--muted); font-size:15px; margin-bottom:16px; }
+.about-sidebar{
+  background:white;
+  border:1px solid var(--border);
+  border-top:4px solid var(--gold);
+  padding:32px;
+  border-radius:3px;
+}
+.about-sidebar h4{ font-family:'Oswald',sans-serif; font-size:17px; color:var(--navy); margin-bottom:14px; text-transform:uppercase; letter-spacing:1px; }
+.about-sidebar p{ font-size:14px; color:var(--muted); line-height:1.8; }
+.about-stat{ border-top:1px solid var(--border); padding-top:14px; margin-top:14px; }
+.about-stat strong{ display:block; font-family:'Oswald',sans-serif; font-size:22px; color:var(--navy); }
+.about-stat span{ font-size:12px; color:var(--muted); text-transform:uppercase; letter-spacing:1px; }
+
+/* KONTAKT */
+.contact-grid{ display:grid; grid-template-columns:3fr 2fr; gap:60px; }
+.form-group{ margin-bottom:20px; }
+.form-group label{ display:block; font-size:12px; font-weight:600; letter-spacing:1px; text-transform:uppercase; color:var(--navy); margin-bottom:7px; }
+.form-group input, .form-group textarea{
+  width:100%;
+  border:1px solid var(--border);
+  background:white;
+  padding:12px 16px;
+  font-family:'Source Sans 3',sans-serif;
+  font-size:15px;
+  color:var(--text);
+  border-radius:3px;
+  outline:none;
+  transition:border-color 0.2s;
+}
+.form-group input:focus, .form-group textarea:focus{ border-color:var(--gold); }
+.form-group textarea{ height:140px; resize:vertical; }
+.contact-info h3{ font-family:'Oswald',sans-serif; font-size:20px; color:var(--navy); margin-bottom:20px; text-transform:uppercase; letter-spacing:1px; }
+.contact-item{ display:flex; gap:14px; margin-bottom:20px; align-items:flex-start; }
+.contact-item-icon{
+  width:36px; height:36px;
+  background:var(--cream);
+  border:1px solid var(--border);
+  border-radius:50%;
+  display:flex; align-items:center; justify-content:center;
+  font-size:15px;
+  flex-shrink:0;
+}
+.contact-item-text strong{ display:block; font-size:11px; text-transform:uppercase; letter-spacing:1px; color:var(--muted); margin-bottom:2px; }
+.contact-item-text a, .contact-item-text p{ font-size:15px; color:var(--navy); text-decoration:none; }
+.contact-item-text a:hover{ color:var(--gold); }
+.map-wrapper{ margin-top:24px; border:1px solid var(--border); border-radius:3px; overflow:hidden; }
+.map-wrapper iframe{ display:block; }
+
+/* FOOTER */
+footer{
+  background:var(--navy);
+  color:var(--sand);
+  padding:40px 32px;
+  margin-top:80px;
+}
+.footer-inner{
+  max-width:1100px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr;
+  gap:40px;
+  padding-bottom:28px;
+  border-bottom:1px solid rgba(255,255,255,0.1);
+}
+.footer-logo{ display:flex; align-items:center; gap:12px; margin-bottom:12px; }
+.footer-logo img{ height:36px; }
+.footer-logo-text{ font-family:'Oswald',sans-serif; font-size:16px; color:white; font-weight:700; text-transform:uppercase; letter-spacing:1px; }
+.footer-logo-text span{ display:block; font-size:10px; letter-spacing:2px; color:var(--sand); text-transform:uppercase; font-weight:600; }
+footer h4{ font-family:'Oswald',sans-serif; font-size:13px; color:var(--gold); margin-bottom:12px; letter-spacing:2px; text-transform:uppercase; }
+footer p{ font-size:13px; line-height:1.9; }
+footer a{ color:var(--sand); text-decoration:none; font-size:13px; cursor:pointer; }
+footer a:hover{ color:var(--gold); }
+.footer-bottom{ max-width:1100px; margin:20px auto 0; text-align:center; font-size:12px; opacity:0.5; }
+
+/* RESPONSIVE */
+@media(max-width:800px){
+  .intro-grid, .services-grid, .products-grid{ grid-template-columns:1fr; }
+  .about-grid, .contact-grid{ grid-template-columns:1fr; }
+  .footer-inner{ grid-template-columns:1fr; }
+  .hero h1{ font-size:32px; }
+  .hero{ padding:60px 20px; }
+  .hero-logo{ width:180px; }
+  .section{ padding:50px 20px; }
+  .page-banner{ padding:36px 20px; }
+  .header-inner{ padding:14px 20px; }
+
+  /* Hamburgermeny */
+  .nav-toggle{
+    display:flex;
+    flex-direction:column;
+    gap:5px;
+    cursor:pointer;
+    padding:6px;
+    background:none;
+    border:none;
+  }
+  .nav-toggle span{
+    display:block;
+    width:24px;
+    height:2px;
+    background:var(--sand);
+    transition:all 0.3s;
+  }
+  nav{
+    display:none;
+    position:absolute;
+    top:100%;
+    left:0;
+    right:0;
+    background:var(--navy);
+    flex-direction:column;
+    padding:12px 20px 20px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.3);
+    gap:4px;
+  }
+  nav.open{ display:flex; }
+  nav a{ padding:12px 16px; }
+}
+
+@media(min-width:801px){
+  .nav-toggle{ display:none; }
+}
+
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="header-inner">
+    <a class="logo-area" onclick="showPage('home')">
+      <img src="Kent_loga_vit.png" class="logo-mark" alt="Merk Produkter logotyp">
+      <div class="logo-text">
+        Merk Produkter
+        <span>Kent Dahlqvist</span>
+      </div>
+    </a>
+    <button class="nav-toggle" onclick="toggleNav()" aria-label="Meny">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="main-nav">
+      <a onclick="showPage('home')"     id="nav-home"     class="active">Startsida</a>
+      <a onclick="showPage('services')" id="nav-services">Tjänster</a>
+      <a onclick="showPage('products')" id="nav-products">Produkter</a>
+      <a onclick="showPage('about')"    id="nav-about">Om oss</a>
+      <a onclick="showPage('contact')"  id="nav-contact">Kontakt</a>
+    </nav>
+  </div>
+</header>
+
+
+<!-- STARTSIDA -->
+<div id="page-home" class="page active">
+
+  <section class="hero">
+    <div class="hero-bg">
+      <img src="Kent allt.png" alt="">
+    </div>
+    <div class="hero-content">
+      <div class="hero-buttons">
+        <button class="btn" onclick="showPage('contact')">Kontakta oss</button>
+        <button class="btn-secondary" onclick="showPage('products')">Se produkter</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Vad vi erbjuder</h2>
+      <div class="divider"></div>
+      <div class="intro-grid">
+        <div class="intro-card">
+          <h3>Installationer</h3>
+          <p>Professionell installation av vattenfilter, pumpar och värmepumpar av erfarna tekniker.</p>
+        </div>
+        <div class="intro-card">
+          <h3>Renovering</h3>
+          <p>Vi moderniserar befintliga system för optimal prestanda och lång livslängd.</p>
+        </div>
+        <div class="intro-card">
+          <h3>Rådgivning</h3>
+          <p>Personlig rådgivning för att hitta rätt lösning för just dig.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+
+<!-- TJÄNSTER -->
+<div id="page-services" class="page">
+
+  <div class="page-banner">
+    <div class="container">
+      <h1>Våra tjänster</h1>
+      <p>Professionella lösningar anpassade efter dina behov</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Vad vi gör</h2>
+      <div class="divider"></div>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">INS</div>
+          <h3>Installationer</h3>
+          <p>Vi installerar vattenfilter, pumpar, värmepumpar och vedanläggningar med hög precision. Alla installationer utförs av utbildad personal och följer gällande normer och standarder.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">REN</div>
+          <h3>Renovering</h3>
+          <p>Har din anläggning sett bättre dagar? Vi bedömer, renoverar och uppgraderar befintliga system för förlängt liv och förbättrad funktion.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">RÅD</div>
+          <h3>Rådgivning</h3>
+          <p>Kent Dahlqvist ger personlig och oberoende rådgivning baserad på lång erfarenhet i branschen. Vi hjälper dig hitta rätt lösning.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+
+<!-- PRODUKTER -->
+<div id="page-products" class="page">
+
+  <div class="page-banner">
+    <div class="container">
+      <h1>Produkter</h1>
+      <p>Kvalitetsprodukter från ledande leverantörer</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Produktkategorier</h2>
+      <div class="divider"></div>
+      <div class="products-grid">
+        <div class="product-card">
+          <div class="product-icon">VF</div>
+          <h3>Vattenfilter</h3>
+        </div>
+        <div class="product-card">
+          <div class="product-icon">PMP</div>
+          <h3>Pumpar</h3>
+        </div>
+        <div class="product-card">
+          <div class="product-icon">LUF</div>
+          <h3>Luftpåfyllare</h3>
+        </div>
+        <div class="product-card">
+          <div class="product-icon">VED</div>
+          <h3>Vedanläggningar</h3>
+        </div>
+        <div class="product-card">
+          <div class="product-icon">LVV</div>
+          <h3>Luft/Vatten-värmepumpar</h3>
+        </div>
+      </div>
+
+      <h3 style="font-family:'Oswald',sans-serif;font-size:22px;color:var(--navy);margin-bottom:8px;text-transform:uppercase;letter-spacing:1px;">Våra leverantörer</h3>
+      <p style="color:var(--muted);font-size:14px;margin-bottom:24px;">Vi samarbetar med välkända och pålitliga varumärken.</p>
+      <div class="partner-links">
+        <a class="partner-link" href="https://www.hsperifal.se" target="_blank" rel="noopener">
+          hsperifal.se
+          <span>Vedpannor</span>
+        </a>
+        <a class="partner-link" href="https://www.vattenfilter.com" target="_blank" rel="noopener">
+          vattenfilter.com
+          <span>Vattenfilter</span>
+        </a>
+        <a class="partner-link" href="https://www.grundfos.com" target="_blank" rel="noopener">
+          grundfos.com
+          <span>Pumpar</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+
+<!-- OM FÖRETAGET -->
+<div id="page-about" class="page">
+
+  <div class="page-banner">
+    <div class="container">
+      <h1>Om företaget</h1>
+      <p>Lär känna oss och vår historia</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text">
+          <h2 class="section-title">Historia</h2>
+          <div class="divider"></div>
+          <p>................................................................................................................................................................................................................................</p>
+          <p>................................................................................................................................................................................................................................</p>
+          <p>................................................................................................................................................................................................................................</p>
+        </div>
+      </div>
+
+      <div style="margin-top:48px;">
+        <div class="about-sidebar" style="max-width:400px;">
+            <div class="footer-logo" style="margin-bottom:16px;">
+              <img src="Kent_loga_vit.png" alt="Merk Produkter" style="height:36px;">
+            </div>
+            <h4>Kontaktperson</h4>
+            <p>Kent Dahlqvist<br>Lindsås 28<br>513 97 Borgstena</p>
+            <div class="about-stat">
+              <strong>0703 26 22 28</strong>
+              <span>Telefon</span>
+            </div>
+            <div class="about-stat">
+              <strong style="font-size:15px;"><a href="mailto:info@merkprodukter.se">info@merkprodukter.se</a></strong>
+              <span>E-post</span>
+            </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+
+<!-- KONTAKT -->
+<div id="page-contact" class="page">
+
+  <div class="page-banner">
+    <div class="container">
+      <h1>Kontakt</h1>
+      <p>Vi svarar vanligtvis inom ett par timmar</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="contact-grid">
+        <div>
+          <h2 class="section-title">Skicka ett meddelande</h2>
+          <div class="divider"></div>
+          <form onsubmit="handleSubmit(event)">
+            <div class="form-group">
+              <label for="name">Namn</label>
+              <input type="text" id="name" name="name" placeholder="Ditt namn" required>
+            </div>
+            <div class="form-group">
+              <label for="email">E-postadress</label>
+              <input type="email" id="email" name="email" placeholder="din@epost.se" required>
+            </div>
+            <div class="form-group">
+              <label for="message">Meddelande</label>
+              <textarea id="message" name="message" placeholder="Berätta vad vi kan hjälpa dig med..." required></textarea>
+            </div>
+            <button type="submit" class="btn">Skicka meddelande</button>
+          </form>
+        </div>
+        <div>
+          <div class="contact-info">
+            <h3>Kontaktuppgifter</h3>
+            <div class="contact-item">
+              <div class="contact-item-icon">👤</div>
+              <div class="contact-item-text">
+                <strong>Namn</strong>
+                <p>Kent Dahlqvist</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item-icon">📞</div>
+              <div class="contact-item-text">
+                <strong>Telefon</strong>
+                <a href="tel:0703262228">0703 26 22 28</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item-icon">✉️</div>
+              <div class="contact-item-text">
+                <strong>E-post</strong>
+                <a href="mailto:info@merkprodukter.se">info@merkprodukter.se</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item-icon">📍</div>
+              <div class="contact-item-text">
+                <strong>Adress</strong>
+                <p>Lindsås 28<br>513 97 Borgstena</p>
+              </div>
+            </div>
+          </div>
+          <div class="map-wrapper">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8483.317665828741!2d12.980134776478156!3d57.88905458318339!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465aa4b4ac260559%3A0x74af7eb4d15e9df1!2sLinds%C3%A5s%2028%2C%20513%2097%20Borgstena!5e0!3m2!1ssv!2sse!4v1773352264699!5m2!1ssv!2sse"
+              width="100%"
+              height="260"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+            <a href="https://www.google.com/maps/place/Lids%C3%A5s+28,+513+97+Borgstena" target="_blank" rel="noopener"
+              style="display:block;text-align:center;padding:14px;background:var(--navy);color:white;text-decoration:none;font-size:13px;font-weight:600;letter-spacing:1px;text-transform:uppercase;margin-top:1px;">
+              📍 Öppna i Google Maps
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo">
+        <img src="Kent_loga_vit.png" alt="Merk Produkter" style="height:36px;">
+        <div class="footer-logo-text">
+          Merk Produkter
+          <span>Kent Dahlqvist</span>
+        </div>
+      </div>
+      <p>Din pålitliga partner för vattenfilter, pumpar och värmepumpar.</p>
+    </div>
+    <div>
+      <h4>Snabblänkar</h4>
+      <p><a onclick="showPage('home')">Startsida</a></p>
+      <p><a onclick="showPage('services')">Tjänster</a></p>
+      <p><a onclick="showPage('products')">Produkter</a></p>
+      <p><a onclick="showPage('about')">Om företaget</a></p>
+      <p><a onclick="showPage('contact')">Kontakt</a></p>
+    </div>
+    <div>
+      <h4>Kontakt</h4>
+      <p>Kent Dahlqvist</p>
+      <p>Lindsås 28, 513 97 Borgstena</p>
+      <p><a href="tel:0703262228">0703 26 22 28</a></p>
+      <p><a href="mailto:info@merkprodukter.se">info@merkprodukter.se</a></p>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2025 Merk Produkter – Kent Dahlqvist. Alla rättigheter förbehållna.</div>
+</footer>
+
+
+
+
+<script>
+function showPage(page) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('nav a').forEach(a => a.classList.remove('active'));
+  document.getElementById('page-' + page).classList.add('active');
+  document.getElementById('nav-' + page).classList.add('active');
+  window.scrollTo({ top: 0 });
+  document.getElementById('main-nav').classList.remove('open');
+}
+
+function toggleNav() {
+  document.getElementById('main-nav').classList.toggle('open');
+}
+
+function handleSubmit(e) {
+  e.preventDefault();
+  alert('Tack för ditt meddelande! Vi återkommer så snart som möjligt.');
+  e.target.reset();
+}
+</script>
+
+</body>
+</html>
