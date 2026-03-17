@@ -56,15 +56,44 @@ nav a:hover,nav a.active{background:var(--gold);color:white;}
 .service-icon svg{width:26px;height:26px;stroke:var(--gold);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;}
 .service-card h3{font-family:'Oswald',sans-serif;font-size:22px;color:var(--navy);margin-bottom:12px;text-transform:uppercase;letter-spacing:1px;}
 .service-card p{color:var(--muted);font-size:14px;line-height:1.8;}
+
+/* ── FEATURED PRODUCTS (image cards) ── */
+.featured-products{display:grid;grid-template-columns:repeat(2,1fr);gap:32px;margin-bottom:56px;}
+.feat-card{background:white;border:1px solid var(--border);border-radius:3px;overflow:hidden;display:flex;flex-direction:column;}
+.feat-card-img{background:#f0f0f0;display:flex;align-items:center;justify-content:center;padding:32px 24px;min-height:260px;}
+.feat-card-img img{max-height:220px;max-width:100%;object-fit:contain;}
+.feat-card-body{padding:28px;flex:1;border-top:4px solid var(--gold);}
+.feat-card-body h3{font-family:'Oswald',sans-serif;font-size:20px;color:var(--navy);margin-bottom:6px;text-transform:uppercase;letter-spacing:1px;}
+.feat-card-subtitle{font-size:12px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);margin-bottom:12px;}
+.feat-card-body p{color:var(--muted);font-size:14px;line-height:1.8;}
+
+/* ── VEDANLÄGGNINGAR banner ── */
+.ved-banner{position:relative;border-radius:3px;overflow:hidden;margin-bottom:32px;}
+.ved-banner img{width:100%;display:block;max-height:260px;object-fit:cover;object-position:center;}
+.ved-banner-label{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top,rgba(30,45,64,0.92),transparent);padding:28px 28px 20px;color:white;}
+.ved-banner-label h3{font-family:'Oswald',sans-serif;font-size:22px;text-transform:uppercase;letter-spacing:1px;}
+.ved-banner-label p{font-size:13px;opacity:0.8;margin-top:4px;}
+
+/* ── VÄRMEPUMP banner ── */
+.vp-banner{position:relative;border-radius:3px;overflow:hidden;margin-bottom:56px;}
+.vp-banner img{width:100%;display:block;max-height:300px;object-fit:cover;object-position:center top;}
+.vp-banner-label{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top,rgba(30,45,64,0.92),transparent);padding:28px 28px 20px;color:white;}
+.vp-banner-label h3{font-family:'Oswald',sans-serif;font-size:22px;text-transform:uppercase;letter-spacing:1px;}
+.vp-banner-label p{font-size:13px;opacity:0.8;margin-top:4px;}
+
 .products-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-bottom:50px;}
 .product-card{background:white;border:1px solid var(--border);padding:28px 20px;border-radius:3px;text-align:center;}
 .product-icon{width:52px;height:52px;background:var(--navy);border-radius:4px;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;}
 .product-icon svg{width:26px;height:26px;stroke:var(--gold);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;}
 .product-card h3{font-family:'Oswald',sans-serif;font-size:17px;color:var(--navy);text-transform:uppercase;letter-spacing:1px;}
+.product-img-wrap{margin-top:16px;display:flex;align-items:center;justify-content:center;min-height:140px;}
+.product-img-wrap img{max-height:140px;max-width:100%;object-fit:contain;}
 .partner-links{display:flex;gap:20px;flex-wrap:wrap;}
 .partner-link{display:inline-block;background:white;border:1px solid var(--border);padding:14px 28px;border-radius:3px;text-decoration:none;color:var(--navy);font-weight:600;font-size:14px;transition:border-color 0.2s,color 0.2s;}
 .partner-link span{display:block;font-size:11px;font-weight:300;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-top:2px;}
 .partner-link:hover{border-color:var(--gold);color:var(--gold);}
+
+/* ── ABOUT ── */
 .about-grid{display:grid;grid-template-columns:3fr 2fr;gap:60px;align-items:start;}
 .about-text p{color:var(--muted);font-size:15px;margin-bottom:16px;}
 .about-sidebar{background:white;border:1px solid var(--border);border-top:4px solid var(--gold);padding:32px;border-radius:3px;}
@@ -73,6 +102,12 @@ nav a:hover,nav a.active{background:var(--gold);color:white;}
 .about-stat{border-top:1px solid var(--border);padding-top:14px;margin-top:14px;}
 .about-stat strong{display:block;font-family:'Oswald',sans-serif;font-size:22px;color:var(--navy);}
 .about-stat span{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;}
+
+/* about history timeline feel */
+.history-block{background:white;border:1px solid var(--border);border-left:4px solid var(--gold);padding:20px 24px;border-radius:0 3px 3px 0;margin-bottom:16px;}
+.history-block .year{font-family:'Oswald',sans-serif;font-size:13px;color:var(--gold);letter-spacing:2px;text-transform:uppercase;margin-bottom:4px;}
+.history-block p{color:var(--muted);font-size:14px;line-height:1.8;margin:0;}
+
 .contact-grid{display:grid;grid-template-columns:3fr 2fr;gap:60px;}
 .form-group{margin-bottom:20px;}
 .form-group label{display:block;font-size:12px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--navy);margin-bottom:7px;}
@@ -99,7 +134,7 @@ footer a{color:var(--sand);text-decoration:none;font-size:13px;cursor:pointer;}
 footer a:hover{color:var(--gold);}
 .footer-bottom{max-width:1100px;margin:20px auto 0;text-align:center;font-size:12px;opacity:0.5;}
 @media(max-width:800px){
-  .intro-grid,.services-grid,.products-grid{grid-template-columns:1fr;}
+  .intro-grid,.services-grid,.products-grid,.featured-products{grid-template-columns:1fr;}
   .about-grid,.contact-grid{grid-template-columns:1fr;}
   .footer-inner{grid-template-columns:1fr;}
   .hero{padding:60px 20px;}
@@ -199,6 +234,7 @@ footer a:hover{color:var(--gold);}
   <div class="page-banner"><div class="container"><h1>Produkter</h1><p>Kvalitetsprodukter från ledande leverantörer</p></div></div>
   <section class="section">
     <div class="container">
+
       <h2 class="section-title">Produktkategorier</h2>
       <div class="divider"></div>
       <div class="products-grid">
@@ -207,12 +243,18 @@ footer a:hover{color:var(--gold);}
             <svg viewBox="0 0 24 24"><path d="M12 2a5 5 0 00-5 5c0 3 5 11 5 11s5-8 5-11a5 5 0 00-5-5z"/><circle cx="12" cy="7" r="2"/></svg>
           </div>
           <h3>Vattenfilter</h3>
+          <div class="product-img-wrap">
+            <img src="Ska_rmavbild_2026-03-17_kl__20_55_35.png" alt="Vattenfilter JCA 10">
+          </div>
         </div>
         <div class="product-card">
           <div class="product-icon">
             <svg viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
           </div>
           <h3>Pumpar</h3>
+          <div class="product-img-wrap">
+            <img src="Ska_rmavbild_2026-03-17_kl__20_56_04.png" alt="Dränkbara pumpar">
+          </div>
         </div>
         <div class="product-card">
           <div class="product-icon">
@@ -225,14 +267,22 @@ footer a:hover{color:var(--gold);}
             <svg viewBox="0 0 24 24"><path d="M17 8C8 10 5.9 16.17 3.82 19.93A2 2 0 005.6 22.4C8 21 10 19 12 17c0 0 0 3 3 5 0 0 4-5 2-10"/><path d="M17 8l2-5"/></svg>
           </div>
           <h3>Vedanläggningar</h3>
+          <div class="product-img-wrap">
+            <img src="Ska_rmavbild_2026-03-17_kl__20_56_42.png" alt="Vedanläggningar">
+          </div>
         </div>
         <div class="product-card">
           <div class="product-icon">
             <svg viewBox="0 0 24 24"><path d="M14 14.76V3.5a2.5 2.5 0 00-5 0v11.26a4.5 4.5 0 105 0z"/></svg>
           </div>
           <h3>Luft/Vatten-värmepumpar</h3>
+          <div class="product-img-wrap">
+            <img src="Ska_rmavbild_2026-03-17_kl__20_56_59.png" alt="Värmepumpar">
+          </div>
         </div>
       </div>
+
+      <!-- Suppliers -->
       <h3 style="font-family:'Oswald',sans-serif;font-size:22px;color:var(--navy);margin-bottom:8px;text-transform:uppercase;letter-spacing:1px;">Våra leverantörer</h3>
       <p style="color:var(--muted);font-size:14px;margin-bottom:24px;">Vi samarbetar med välkända och pålitliga varumärken.</p>
       <div class="partner-links">
@@ -253,20 +303,9 @@ footer a:hover{color:var(--gold);}
         <div class="about-text">
           <h2 class="section-title">Historia</h2>
           <div class="divider"></div>
-          <p>Merk Produkter grundades av Kent Dahlqvist med en enkel tanke – att erbjuda privatpersoner och företag i Västra Götaland pålitliga produkter och professionell service inom värme, sanitet och vattenrening.</p>
-          <p>Med lång erfarenhet i branschen och ett genuint intresse för hantverket har Kent byggt upp ett företag som står för kvalitet, ärlighet och personlig service. Varje kund behandlas individuellt och får råd och lösningar som passar just deras behov och budget.</p>
-          <p>Idag erbjuder Merk Produkter ett brett sortiment av vattenfilter, pumpar, luftpåfyllare, vedanläggningar och luft/vatten-värmepumpar – alltid med samma engagemang och noggrannhet som präglat företaget från första dagen.</p>
-        </div>
-      </div>
-      <div style="margin-top:48px;">
-        <div class="about-sidebar" style="max-width:400px;">
-          <div class="footer-logo" style="margin-bottom:16px;">
-            <img src="Kent_loga_vit.png" alt="Merk Produkter" style="height:36px;">
-          </div>
-          <h4>Kontaktperson</h4>
-          <p>Kent Dahlqvist<br>Lindsås 28<br>513 97 Borgstena</p>
-          <div class="about-stat"><strong>0703 26 22 28</strong><span>Telefon</span></div>
-          <div class="about-stat"><strong style="font-size:15px;"><a href="mailto:info@merkprodukter.se">info@merkprodukter.se</a></strong><span>E-post</span></div>
+          <p>MERK-produkter startades 1984 av Runar Larsson. Namnet MERK väcker ofta frågor, förklaringen är att det står för MorganEvaRunarKent då Runar hade visioner om att det skulle vara ett familjeföretag.</p>
+          <p>Den stora kunskapen fanns om vattenrening och pumpar för enskilda brunnar och det var med den marknaden i fokus som företaget startade. Sedermera blev även pelletsbrännare en stor del av omsättningen.</p>
+          <p>2007 tog Kent över. Kent har behållit vattenrening i verksamheten, utför mycket pump-arbeten också och då i samarbete med annan firma. Kent har allmänt rörmokeri i verksamheten. Badrum/kök, konvertering till vattenburna värmesystem, installation av ved/pelletspannor med ackumulatortankar, i viss mån även värmepumpar (att koppla mot befintligt ackumulatorsystem) och de flesta andra förekommande VVS-arbeten.</p>
         </div>
       </div>
     </div>
@@ -347,11 +386,6 @@ function showPage(page) {
 }
 function toggleNav() {
   document.getElementById('main-nav').classList.toggle('open');
-}
-function handleSubmit(e) {
-  e.preventDefault();
-  alert('Tack för ditt meddelande! Vi återkommer så snart som möjligt.');
-  e.target.reset();
 }
 </script>
 </body>
