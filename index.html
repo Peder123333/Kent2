@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="sv">
 <head>
@@ -67,95 +66,45 @@ nav a:hover, nav a.active { background: var(--gold); color: white; }
 .btn-secondary { background: white; color: var(--navy); border: 2px solid var(--navy); padding: 12px 28px; border-radius: 4px; cursor: pointer; font-weight: 600; font-family: 'Source Sans 3', sans-serif; font-size: 15px; transition: all 0.2s; }
 .btn-secondary:hover { background: var(--navy); color: white; }
 
-/* Home intro cards */
-.intro-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
-.intro-card { background: white; border: 1px solid var(--border); padding: 30px; border-top: 4px solid var(--gold); border-radius: 3px; }
-.intro-card h3 { font-family: 'Oswald', sans-serif; font-size: 20px; color: var(--navy); margin-bottom: 10px; text-transform: uppercase; letter-spacing: 1px; }
-.intro-card p { color: var(--muted); font-size: 14px; }
+/* Grid systems */
+.intro-grid, .services-grid, .products-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+.intro-card, .service-card { background: white; border: 1px solid var(--border); padding: 30px; border-top: 4px solid var(--gold); border-radius: 3px; }
 
-/* Services */
-.services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
-.service-card { background: white; border: 1px solid var(--border); padding: 36px 28px; border-top: 4px solid var(--gold); border-radius: 3px; }
-.service-icon { width: 52px; height: 52px; background: var(--navy); border-radius: 4px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; }
-.service-icon svg { width: 26px; height: 26px; stroke: var(--gold); fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
-.service-card h3 { font-family: 'Oswald', sans-serif; font-size: 22px; color: var(--navy); margin-bottom: 12px; text-transform: uppercase; letter-spacing: 1px; }
-.service-card p { color: var(--muted); font-size: 14px; line-height: 1.8; }
+/* Icons */
+.service-icon, .product-icon { width: 52px; height: 52px; background: var(--navy); border-radius: 4px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; }
+.service-icon svg, .product-icon svg { width: 26px; height: 26px; stroke: var(--gold); fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
 
-/* Products */
-.products-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-bottom: 50px; }
-.product-card { background: white; border: 1px solid var(--border); padding: 28px 24px; border-radius: 3px; text-align: center; cursor: pointer; transition: box-shadow 0.2s, transform 0.15s; border-top: 3px solid transparent; }
-.product-card:hover { box-shadow: 0 6px 24px rgba(0,0,0,0.10); transform: translateY(-3px); border-top-color: var(--gold); }
-.product-icon { width: 52px; height: 52px; background: var(--navy); border-radius: 4px; display: flex; align-items: center; justify-content: center; margin: 0 auto 14px; }
-.product-icon svg { width: 26px; height: 26px; stroke: var(--gold); fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
-.product-card h3 { font-family: 'Oswald', sans-serif; font-size: 17px; color: var(--navy); text-transform: uppercase; letter-spacing: 1px; }
-.product-desc { color: var(--muted); font-size: 13px; margin-top: 8px; margin-bottom: 12px; line-height: 1.6; }
-.product-btn { display: inline-block; margin-top: 4px; font-size: 12px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--gold); }
+/* Product cards */
+.product-card { background: white; border: 1px solid var(--border); padding: 28px 24px; border-radius: 3px; text-align: center; cursor: pointer; transition: all 0.2s; border-top: 3px solid transparent; }
+.product-card:hover { box-shadow: 0 6px 24px rgba(0,0,0,0.1); transform: translateY(-3px); border-top-color: var(--gold); }
+.product-desc { color: var(--muted); font-size: 13px; margin: 8px 0 12px; line-height: 1.6; }
+.product-btn { color: var(--gold); font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
 
-/* Modal */
+/* Modals */
 .modal { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.6); z-index: 999; align-items: center; justify-content: center; padding: 20px; }
 .modal.open { display: flex; }
 .modal-box { background: white; border-radius: 6px; max-width: 560px; width: 100%; padding: 32px; position: relative; max-height: 90vh; overflow-y: auto; }
-.modal-box img { width: 100%; max-height: 320px; object-fit: contain; margin-bottom: 20px; background: #f5f5f5; border-radius: 3px; padding: 16px; }
-.modal-box h3 { font-family: 'Oswald', sans-serif; font-size: 22px; color: var(--navy); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px; }
-.modal-box p { color: var(--muted); font-size: 14px; line-height: 1.8; }
-.modal-close { position: absolute; top: 14px; right: 16px; background: none; border: none; font-size: 20px; cursor: pointer; color: var(--muted); line-height: 1; }
-.modal-close:hover { color: var(--navy); }
+.modal-close { position: absolute; top: 14px; right: 16px; background: none; border: none; font-size: 20px; cursor: pointer; color: var(--muted); }
 
 /* Partners */
 .partner-links { display: flex; gap: 20px; flex-wrap: wrap; }
-.partner-link { display: inline-block; background: white; border: 1px solid var(--border); padding: 14px 28px; border-radius: 3px; text-decoration: none; color: var(--navy); font-weight: 600; font-size: 14px; transition: border-color 0.2s, color 0.2s; }
-.partner-link span { display: block; font-size: 11px; font-weight: 300; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; margin-top: 2px; }
-.partner-link:hover { border-color: var(--gold); color: var(--gold); }
+.partner-link { background: white; border: 1px solid var(--border); padding: 14px 28px; border-radius: 3px; text-decoration: none; color: var(--navy); font-weight: 600; font-size: 14px; }
+.partner-link span { display: block; font-size: 11px; color: var(--muted); text-transform: uppercase; }
 
-/* About */
-.about-grid { display: grid; grid-template-columns: 3fr 2fr; gap: 60px; align-items: start; }
-.about-text p { color: var(--muted); font-size: 15px; margin-bottom: 16px; }
-
-/* Contact */
+/* Contact Form */
 .contact-grid { display: grid; grid-template-columns: 3fr 2fr; gap: 60px; }
 .form-group { margin-bottom: 20px; }
-.form-group label { display: block; font-size: 12px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; color: var(--navy); margin-bottom: 7px; }
-.form-group input, .form-group textarea { width: 100%; border: 1px solid var(--border); background: white; padding: 12px 16px; font-family: 'Source Sans 3', sans-serif; font-size: 15px; color: var(--text); border-radius: 3px; outline: none; transition: border-color 0.2s; }
-.form-group input:focus, .form-group textarea:focus { border-color: var(--gold); }
-.form-group textarea { height: 140px; resize: vertical; }
-.contact-info h3 { font-family: 'Oswald', sans-serif; font-size: 20px; color: var(--navy); margin-bottom: 20px; text-transform: uppercase; letter-spacing: 1px; }
-.contact-item { display: flex; gap: 14px; margin-bottom: 20px; align-items: flex-start; }
-.contact-item-icon { width: 36px; height: 36px; background: var(--cream); border: 1px solid var(--border); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 15px; flex-shrink: 0; }
-.contact-item-text strong { display: block; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: var(--muted); margin-bottom: 2px; }
-.contact-item-text a, .contact-item-text p { font-size: 15px; color: var(--navy); text-decoration: none; }
-.contact-item-text a:hover { color: var(--gold); }
-.map-wrapper { margin-top: 24px; border: 1px solid var(--border); border-radius: 3px; overflow: hidden; }
-.map-wrapper iframe { display: block; }
+.form-group label { display: block; font-size: 12px; font-weight: 600; text-transform: uppercase; margin-bottom: 7px; }
+.form-group input, .form-group textarea { width: 100%; border: 1px solid var(--border); padding: 12px 16px; border-radius: 3px; font-family: inherit; }
 
 /* Footer */
 footer { background: var(--navy); color: var(--sand); padding: 40px 32px; margin-top: 80px; }
-.footer-inner { max-width: 1100px; margin: auto; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 40px; padding-bottom: 28px; border-bottom: 1px solid rgba(255,255,255,0.1); }
-.footer-logo { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
-.footer-logo img { height: 36px; }
-.footer-logo-text { font-family: 'Oswald', sans-serif; font-size: 16px; color: white; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
-.footer-logo-text span { display: block; font-size: 10px; letter-spacing: 2px; color: var(--sand); text-transform: uppercase; font-weight: 600; }
-footer h4 { font-family: 'Oswald', sans-serif; font-size: 13px; color: var(--gold); margin-bottom: 12px; letter-spacing: 2px; text-transform: uppercase; }
-footer p { font-size: 13px; line-height: 1.9; }
-footer a { color: var(--sand); text-decoration: none; font-size: 13px; cursor: pointer; }
-footer a:hover { color: var(--gold); }
-.footer-bottom { max-width: 1100px; margin: 20px auto 0; text-align: center; font-size: 12px; opacity: 0.5; }
+.footer-inner { max-width: 1100px; margin: auto; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 40px; }
 
-/* Responsive */
 @media (max-width: 800px) {
-  .intro-grid, .services-grid, .products-grid { grid-template-columns: 1fr; }
-  .about-grid, .contact-grid { grid-template-columns: 1fr; }
-  .footer-inner { grid-template-columns: 1fr; }
-  .hero { padding: 60px 20px; }
-  .section { padding: 50px 20px; }
-  .page-banner { padding: 36px 20px; }
-  .header-inner { padding: 14px 20px; }
-  .nav-toggle { display: flex; flex-direction: column; gap: 5px; cursor: pointer; padding: 6px; background: none; border: none; }
-  .nav-toggle span { display: block; width: 24px; height: 2px; background: var(--sand); transition: all 0.3s; }
-  nav { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--navy); flex-direction: column; padding: 12px 20px 20px; box-shadow: 0 8px 20px rgba(0,0,0,0.3); gap: 4px; }
-  nav.open { display: flex; }
-  nav a { padding: 12px 16px; }
+  .intro-grid, .services-grid, .products-grid, .contact-grid, .footer-inner { grid-template-columns: 1fr; }
+  nav { display: none; }
 }
-@media (min-width: 801px) { .nav-toggle { display: none; } }
 </style>
 </head>
 <body>
@@ -163,18 +112,15 @@ footer a:hover { color: var(--gold); }
 <header>
   <div class="header-inner">
     <a class="logo-area" onclick="showPage('home')">
-      <img src="Kent_loga_vit.png" class="logo-mark" alt="Merk Produkter logotyp">
+      <img src="Kent_loga_vit.png" class="logo-mark" alt="Merk Produkter">
       <div class="logo-text">Merk Produkter<span>Kent Dahlqvist</span></div>
     </a>
-    <button class="nav-toggle" onclick="toggleNav()" aria-label="Meny">
-      <span></span><span></span><span></span>
-    </button>
     <nav id="main-nav">
-      <a onclick="showPage('home')"     id="nav-home"     class="active">Startsida</a>
+      <a onclick="showPage('home')" id="nav-home" class="active">Startsida</a>
       <a onclick="showPage('services')" id="nav-services">Tjänster</a>
       <a onclick="showPage('products')" id="nav-products">Produkter</a>
-      <a onclick="showPage('about')"    id="nav-about">Om oss</a>
-      <a onclick="showPage('contact')"  id="nav-contact">Kontakt</a>
+      <a onclick="showPage('about')" id="nav-about">Om oss</a>
+      <a onclick="showPage('contact')" id="nav-contact">Kontakt</a>
     </nav>
   </div>
 </header>
@@ -194,55 +140,35 @@ footer a:hover { color: var(--gold); }
       <h2 class="section-title">Vad vi erbjuder</h2>
       <div class="divider"></div>
       <div class="intro-grid">
-        <div class="intro-card">
-          <h3>Installationer</h3>
-          <p>Professionell installation av vattenfilter, pumpar och värmepumpar av erfarna tekniker.</p>
-        </div>
-        <div class="intro-card">
-          <h3>Renovering</h3>
-          <p>Vi moderniserar befintliga system för optimal prestanda och lång livslängd.</p>
-        </div>
-        <div class="intro-card">
-          <h3>Rådgivning</h3>
-          <p>Personlig rådgivning för att hitta rätt lösning för just dig.</p>
-        </div>
+        <div class="intro-card"><h3>Installationer</h3><p>Professionell installation av vattenfilter, pumpar och värmepumpar.</p></div>
+        <div class="intro-card"><h3>Renovering</h3><p>Vi moderniserar befintliga system för optimal prestanda.</p></div>
+        <div class="intro-card"><h3>Rådgivning</h3><p>Personlig rådgivning för att hitta rätt lösning för just dig.</p></div>
       </div>
     </div>
   </section>
 </div>
 
 <div id="page-services" class="page">
-  <div class="page-banner">
-    <div class="container">
-      <h1>Våra tjänster</h1>
-      <p>Professionella lösningar anpassade efter dina behov</p>
-    </div>
-  </div>
+  <div class="page-banner"><div class="container"><h1>Våra tjänster</h1><p>Professionella lösningar för dina behov</p></div></div>
   <section class="section">
     <div class="container">
       <h2 class="section-title">Vad vi gör</h2>
       <div class="divider"></div>
       <div class="services-grid">
         <div class="service-card">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
-          </div>
+          <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg></div>
           <h3>Installationer</h3>
-          <p>Vi installerar vattenfilter, pumpar, värmepumpar och vedanläggningar med hög precision. Alla installationer utförs av utbildad personal och följer gällande normer och standarder.</p>
+          <p>Vi installerar vattenfilter, pumpar och värmesystem med hög precision.</p>
         </div>
         <div class="service-card">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-          </div>
+          <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
           <h3>Renovering</h3>
-          <p>Har din anläggning sett bättre dagar? Vi bedömer, renoverar och uppgraderar befintliga system för förlängt liv och förbättrad funktion.</p>
+          <p>Vi bedömer och uppgraderar befintliga system för förlängd livslängd.</p>
         </div>
         <div class="service-card">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
-          </div>
+          <div class="service-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg></div>
           <h3>Rådgivning</h3>
-          <p>Kent Dahlqvist ger personlig och oberoende rådgivning baserad på lång erfarenhet i branschen. Vi hjälper dig hitta rätt lösning.</p>
+          <p>Kent Dahlqvist ger personlig rådgivning baserad på lång erfarenhet.</p>
         </div>
       </div>
     </div>
@@ -250,188 +176,78 @@ footer a:hover { color: var(--gold); }
 </div>
 
 <div id="page-products" class="page">
-  <div class="page-banner">
-    <div class="container">
-      <h1>Produkter</h1>
-      <p>Kvalitetsprodukter från ledande leverantörer</p>
-    </div>
-  </div>
+  <div class="page-banner"><div class="container"><h1>Produkter</h1><p>Kvalitetsprodukter från ledande leverantörer</p></div></div>
   <section class="section">
     <div class="container">
       <h2 class="section-title">Produktkategorier</h2>
       <div class="divider"></div>
       <div class="products-grid">
-
         <div class="product-card" onclick="openModal('modal-vattenfilter')">
-          <div class="product-icon">
-            <svg viewBox="0 0 24 24"><path d="M12 2.69l5.66 5.66a8 8 0 11-11.31 0z"/></svg>
-          </div>
-          <h3>Vattenfilter</h3>
-          <p class="product-desc">Järnfilter, manganfilter och pH-höjare för brunnsvatten.</p>
-          <span class="product-btn">Se mer →</span>
+          <div class="product-icon"><svg viewBox="0 0 24 24"><path d="M12 2.69l5.66 5.66a8 8 0 11-11.31 0z"/></svg></div>
+          <h3>Vattenfilter</h3><p class="product-desc">Järnfilter och pH-höjare för brunnsvatten.</p><span class="product-btn">Se mer →</span>
         </div>
-
         <div class="product-card" onclick="openModal('modal-pumpar')">
-          <div class="product-icon">
-            <svg viewBox="0 0 24 24"><path d="M12 22V12m0 0c0-4-4-6-4-6m4 6c0-4 4-6 4-6M5 12H2m20 0h-3M5.64 5.64l2.12 2.12m8.48 8.48l2.12 2.12M5.64 18.36l2.12-2.12m8.48-8.48l2.12-2.12"/></svg>
-          </div>
-          <h3>Pumpar</h3>
-          <p class="product-desc">Dränkbara pumpar i rostfritt stål för alla ändamål.</p>
-          <span class="product-btn">Se mer →</span>
+          <div class="product-icon"><svg viewBox="0 0 24 24"><path d="M12 22V12m0 0c0-4-4-6-4-6m4 6c0-4 4-6 4-6"/></svg></div>
+          <h3>Pumpar</h3><p class="product-desc">Dränkbara pumpar i rostfritt stål.</p><span class="product-btn">Se mer →</span>
         </div>
-
         <div class="product-card" onclick="openModal('modal-luft')">
-          <div class="product-icon">
-            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
-          </div>
-          <h3>Luftpåfyllare</h3>
-          <p class="product-desc">Luftpåfyllare för trycktankar och vattensystem.</p>
-          <span class="product-btn">Se mer →</span>
+          <div class="product-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4"/></svg></div>
+          <h3>Luftpåfyllare</h3><p class="product-desc">För trycktankar och vattensystem.</p><span class="product-btn">Se mer →</span>
         </div>
-
         <div class="product-card" onclick="openModal('modal-ved')">
-          <div class="product-icon">
-            <svg viewBox="0 0 24 24"><path d="M12 2c0 6-6 8-6 14a6 6 0 0012 0c0-6-6-8-6-14z"/><path d="M12 12c0 3-2 4-2 7a2 2 0 004 0c0-3-2-4-2-7z"/></svg>
-          </div>
-          <h3>Vedanläggningar</h3>
-          <p class="product-desc">Ecodesign-godkända ved- och pelletspannor.</p>
-          <span class="product-btn">Se mer →</span>
+          <div class="product-icon"><svg viewBox="0 0 24 24"><path d="M12 2c0 6-6 8-6 14a6 6 0 0012 0"/></svg></div>
+          <h3>Vedanläggningar</h3><p class="product-desc">Ecodesign-godkända pannor.</p><span class="product-btn">Se mer →</span>
         </div>
-
         <div class="product-card" onclick="openModal('modal-vp')">
-          <div class="product-icon">
-            <svg viewBox="0 0 24 24"><path d="M14 14.76V3.5a2.5 2.5 0 00-5 0v11.26a4.5 4.5 0 105 0z"/></svg>
-          </div>
-          <h3>Luft/Vatten-värmepumpar</h3>
-          <p class="product-desc">Komplettera din anläggning med en värmepump.</p>
-          <span class="product-btn">Se mer →</span>
+          <div class="product-icon"><svg viewBox="0 0 24 24"><path d="M14 14.76V3.5a2.5 2.5 0 00-5 0v11.26a4.5 4.5 0 105 0z"/></svg></div>
+          <h3>Värmepumpar</h3><p class="product-desc">Luft/vatten-lösningar.</p><span class="product-btn">Se mer →</span>
         </div>
-
       </div>
-
-      <h3 style="font-family:'Oswald',sans-serif;font-size:22px;color:var(--navy);margin-bottom:8px;text-transform:uppercase;letter-spacing:1px;">Våra leverantörer</h3>
-      <p style="color:var(--muted);font-size:14px;margin-bottom:24px;">Vi samarbetar med välkända och pålitliga varumärken.</p>
-      <div class="partner-links">
-        <a class="partner-link" href="https://www.hsperifal.se" target="_blank" rel="noopener">hsperifal.se<span>Vedpannor</span></a>
-        <a class="partner-link" href="https://www.vattenfilter.com" target="_blank" rel="noopener">vattenfilter.com<span>Vattenfilter</span></a>
-        <a class="partner-link" href="https://www.grundfos.com" target="_blank" rel="noopener">grundfos.com<span>Pumpar</span></a>
+      <div class="partner-links" style="margin-top: 40px;">
+        <a class="partner-link" href="https://www.hsperifal.se" target="_blank">hsperifal.se<span>Vedpannor</span></a>
+        <a class="partner-link" href="https://www.vattenfilter.com" target="_blank">vattenfilter.com<span>Vattenfilter</span></a>
       </div>
     </div>
   </section>
 </div>
 
 <div id="page-about" class="page">
-  <div class="page-banner">
-    <div class="container">
-      <h1>Om företaget</h1>
-      <p>Lär känna oss och vår historia</p>
-    </div>
-  </div>
+  <div class="page-banner"><div class="container"><h1>Om företaget</h1><p>Vår historia sedan 1984</p></div></div>
   <section class="section">
     <div class="container">
-      <div class="about-grid">
-        <div class="about-text">
-          <h2 class="section-title">Historia</h2>
-          <div class="divider"></div>
-          <p>MERK-produkter startades 1984 av Runar Larsson. Namnet MERK väcker ofta frågor, förklaringen är att det står för MorganEvaRunarKent då Runar hade visioner om att det skulle vara ett familjeföretag.</p>
-          <p>Den stora kunskapen fanns om vattenrening och pumpar för enskilda brunnar och det var med den marknaden i fokus som företaget startade. Sedermera blev även pelletsbrännare en stor del av omsättningen.</p>
-          <p>2007 tog Kent över. Kent har behållit vattenrening i verksamheten, utför mycket pump-arbeten också och då i samarbete med annan firma. Kent har allmänt rörmokeri i verksamheten. Badrum/kök, konvertering till vattenburna värmesystem, installation av ved/pelletspannor med ackumulatortankar, i viss mån även värmepumpar (att koppla mot befintligt ackumulatorsystem) och de flesta andra förekommande VVS-arbeten.</p>
-        </div>
-      </div>
+      <h2 class="section-title">Historia</h2>
+      <div class="divider"></div>
+      <p>MERK-produkter startades 1984 av Runar Larsson. Sedan 2007 drivs företaget av Kent Dahlqvist med fokus på vattenrening, pumpar och allmänt rörmokeri.</p>
     </div>
   </section>
 </div>
 
 <div id="page-contact" class="page">
-  <div class="page-banner">
-    <div class="container">
-      <h1>Kontakt</h1>
-      <p>Vi svarar vanligtvis inom ett par timmar</p>
-    </div>
-  </div>
+  <div class="page-banner"><div class="container"><h1>Kontakt</h1><p>Kontakta Kent Dahlqvist</p></div></div>
   <section class="section">
     <div class="container">
       <div class="contact-grid">
-        <div>
-          <h2 class="section-title">Skicka ett meddelande</h2>
-          <div class="divider"></div>
-          <form action="https://formspree.io/f/xzdakvql" method="POST">
-            <div class="form-group">
-              <label for="name">Namn</label>
-              <input type="text" id="name" name="name" placeholder="Ditt namn" required>
-            </div>
-            <div class="form-group">
-              <label for="email">E-postadress</label>
-              <input type="email" id="email" name="email" placeholder="din@epost.se" required>
-            </div>
-            <div class="form-group">
-              <label for="message">Meddelande</label>
-              <textarea id="message" name="message" placeholder="Berätta vad vi kan hjälpa dig med..." required></textarea>
-            </div>
-            <button type="submit" class="btn">Skicka meddelande</button>
-          </form>
-        </div>
-        <div>
-          <div class="contact-info">
-            <h3>Kontaktuppgifter</h3>
-            <div class="contact-item">
-              <div class="contact-item-icon">👤</div>
-              <div class="contact-item-text"><strong>Namn</strong><p>Kent Dahlqvist</p></div>
-            </div>
-            <div class="contact-item">
-              <div class="contact-item-icon">📞</div>
-              <div class="contact-item-text"><strong>Telefon</strong><a href="tel:0703262228">0703 26 22 28</a></div>
-            </div>
-            <div class="contact-item">
-              <div class="contact-item-icon">✉️</div>
-              <div class="contact-item-text"><strong>E-post</strong><a href="mailto:info@merkprodukter.se">info@merkprodukter.se</a></div>
-            </div>
-            <div class="contact-item">
-              <div class="contact-item-icon">📍</div>
-              <div class="contact-item-text"><strong>Adress</strong><p>Lindsås 28<br>513 97 Borgstena</p></div>
-            </div>
-          </div>
-          <div class="map-wrapper">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2122.378546538466!2d13.0305886!3d57.8864708!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46453f6b98e8f81b%3A0x6b1f2e4695e533c!2sLinds%C3%A5s%2028%2C%20513%2097%20Borgstena!5e0!3m2!1ssv!2sse!4v1715264000000!5m2!1ssv!2sse" width="100%" height="260" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            <a href="https://maps.app.goo.gl/YourMapLink" target="_blank" rel="noopener" style="display:block;text-align:center;padding:14px;background:var(--navy);color:white;text-decoration:none;font-size:13px;font-weight:600;letter-spacing:1px;text-transform:uppercase;margin-top:1px;">📍 Öppna i Google Maps</a>
-          </div>
+        <form action="https://formspree.io/f/xzdakvql" method="POST">
+          <div class="form-group"><label>Namn</label><input type="text" name="name" required></div>
+          <div class="form-group"><label>E-post</label><input type="email" name="email" required></div>
+          <div class="form-group"><label>Meddelande</label><textarea name="message" required></textarea></div>
+          <button type="submit" class="btn">Skicka</button>
+        </form>
+        <div class="contact-info">
+          <h3>Kontaktuppgifter</h3>
+          <p><strong>Telefon:</strong> 0703 26 22 28</p>
+          <p><strong>E-post:</strong> info@merkprodukter.se</p>
+          <p><strong>Adress:</strong> Lindsås 28, 513 97 Borgstena</p>
         </div>
       </div>
     </div>
   </section>
 </div>
 
-<div id="modal-vattenfilter" class="modal" onclick="closeModal(event)">
-  <div class="modal-box">
-    <button class="modal-close" onclick="closeAllModals()">✕</button>
-    <h3>Vattenfilter</h3>
-    <p>Järnfilter, manganfilter och pH-höjare för brunnsvatten. Vi hjälper dig att få rent och friskt vatten genom noggrann analys och rätt filterval.</p>
-  </div>
-</div>
-
-<div id="modal-pumpar" class="modal" onclick="closeModal(event)">
-  <div class="modal-box">
-    <button class="modal-close" onclick="closeAllModals()">✕</button>
-    <h3>Pumpar</h3>
-    <p>Dränkbara pumpar i rostfritt stål för alla ändamål. Vi installerar och servar pumpar från ledande tillverkare som Grundfos.</p>
-  </div>
-</div>
-
-<div id="modal-ved" class="modal" onclick="closeModal(event)">
-  <div class="modal-box">
-    <button class="modal-close" onclick="closeAllModals()">✕</button>
-    <h3>Vedanläggningar</h3>
-    <p>Ecodesign-godkända ved- och pelletspannor. Effektiva lösningar för hållbar uppvärmning av ditt hem.</p>
-  </div>
-</div>
-
-<div id="modal-vp" class="modal" onclick="closeModal(event)">
-  <div class="modal-box">
-    <button class="modal-close" onclick="closeAllModals()">✕</button>
-    <h3>Luft/Vatten-värmepumpar</h3>
-    <p>Komplettera din anläggning med en värmepump för optimal driftekonomi och komfort året runt.</p>
-  </div>
-</div>
+<div id="modal-vattenfilter" class="modal" onclick="closeModal(event)"><div class="modal-box"><button class="modal-close" onclick="closeAllModals()">✕</button><h3>Vattenfilter</h3><p>Information om våra vattenfilter.</p></div></div>
+<div id="modal-pumpar" class="modal" onclick="closeModal(event)"><div class="modal-box"><button class="modal-close" onclick="closeAllModals()">✕</button><h3>Pumpar</h3><p>Information om våra pumpar.</p></div></div>
+<div id="modal-ved" class="modal" onclick="closeModal(event)"><div class="modal-box"><button class="modal-close" onclick="closeAllModals()">✕</button><h3>Vedanläggningar</h3><p>Information om vedpannor.</p></div></div>
+<div id="modal-vp" class="modal" onclick="closeModal(event)"><div class="modal-box"><button class="modal-close" onclick="closeAllModals()">✕</button><h3>Värmepumpar</h3><p>Information om värmepumpar.</p></div></div>
 
 <div id="modal-luft" class="modal" onclick="closeModal(event)">
   <div class="modal-box">
@@ -439,87 +255,40 @@ footer a:hover { color: var(--gold); }
     <h3>Luftpåfyllare</h3>
     <p>Luftpåfyllare för trycktankar och vattensystem.</p>
     <div style="margin-top:16px;position:relative;padding-top:56.25%;overflow:hidden;border-radius:4px;">
-      <iframe style="position:absolute;top:0;left:0;width:100%;height:100%;" src="https://www.youtube.com/embed/zzl5IFMhXaw" title="Luftpåfyllare" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <iframe style="position:absolute;top:0;left:0;width:100%;height:100%;" src="https://www.youtube.com/embed/zzl5IFMhXaw" title="Luftpåfyllare" frameborder="0" allowfullscreen></iframe>
     </div>
   </div>
 </div>
 
 <footer>
   <div class="footer-inner">
-    <div>
-      <div class="footer-logo">
-        <div class="footer-logo-text">Merk Produkter<span>Kent Dahlqvist</span></div>
-      </div>
-      <p>Din partner för värme, sanitet och vattenrening i Västra Götaland sedan 1984.</p>
-    </div>
-    <div>
-      <h4>Meny</h4>
-      <p><a onclick="showPage('home')">Startsida</a></p>
-      <p><a onclick="showPage('services')">Tjänster</a></p>
-      <p><a onclick="showPage('products')">Produkter</a></p>
-      <p><a onclick="showPage('contact')">Kontakt</a></p>
-    </div>
-    <div>
-      <h4>Hitta oss</h4>
-      <p>Lindsås 28, 513 97 Borgstena</p>
-      <p>Tel: 0703 26 22 28</p>
-      <p>E-post: info@merkprodukter.se</p>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    &copy; 2026 Merk Produkter. Alla rättigheter förbehållna.
+    <div><h4>Merk Produkter</h4><p>Sedan 1984.</p></div>
+    <div><h4>Meny</h4><p><a onclick="showPage('home')">Start</a></p><p><a onclick="showPage('products')">Produkter</a></p></div>
+    <div><h4>Kontakt</h4><p>0703 26 22 28</p></div>
   </div>
 </footer>
 
 <script>
-/* Funktion för att byta sida */
 function showPage(pageId) {
-  // Dölj alla sidor
-  document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
-  // Visa vald sida
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
   document.getElementById('page-' + pageId).classList.add('active');
-  
-  // Uppdatera nav-länkar
-  document.querySelectorAll('nav a').forEach(link => link.classList.remove('active'));
-  const activeNavLink = document.getElementById('nav-' + pageId);
-  if (activeNavLink) activeNavLink.classList.add('active');
-
-  // Stäng mobilmenyn om den är öppen
-  document.getElementById('main-nav').classList.remove('open');
+  document.querySelectorAll('nav a').forEach(a => a.classList.remove('active'));
+  if(document.getElementById('nav-' + pageId)) document.getElementById('nav-' + pageId).classList.add('active');
   window.scrollTo(0, 0);
 }
-
-/* Mobilmeny toggle */
-function toggleNav() {
-  document.getElementById('main-nav').classList.toggle('open');
+function openModal(id) {
+  document.getElementById(id).classList.add('open');
+  document.body.style.overflow = 'hidden';
 }
-
-/* Modal-funktioner */
-function openModal(modalId) {
-  document.getElementById(modalId).classList.add('open');
-  document.body.style.overflow = 'hidden'; // Hindra skroll bakom
-}
-
 function closeAllModals() {
-  document.querySelectorAll('.modal').forEach(modal => modal.classList.remove('open'));
+  document.querySelectorAll('.modal').forEach(m => m.classList.remove('open'));
   document.body.style.overflow = 'auto';
-  
-  // Stoppa YouTube-videon när modalen stängs
   const iframes = document.querySelectorAll('iframe');
-  iframes.forEach(iframe => {
-    const src = iframe.src;
-    iframe.src = src;
-  });
+  iframes.forEach(i => { const s = i.src; i.src = s; });
 }
-
-function closeModal(event) {
-  // Stäng bara om man klickar på bakgrunden (utanför modal-box)
-  if (event.target.classList.contains('modal')) {
-    closeAllModals();
-  }
+function closeModal(e) {
+  if (e.target.classList.contains('modal')) closeAllModals();
 }
 </script>
-
 </body>
 </html>
-
