@@ -94,7 +94,8 @@ nav a:hover, nav a.active { background: var(--gold); color: white; }
 .modal { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.6); z-index: 999; align-items: center; justify-content: center; padding: 20px; }
 .modal.open { display: flex; }
 .modal-box { background: white; border-radius: 6px; max-width: 560px; width: 100%; padding: 32px; position: relative; max-height: 90vh; overflow-y: auto; }
-.modal-box img { width: 100%; max-height: 320px; object-fit: contain; margin-bottom: 20px; background: #f5f5f5; border-radius: 3px; padding: 16px; }
+.modal-box img { width: 100%; max-height: 320px; object-fit: contain; margin-bottom: 20px; }
+.modal-box img.crop-center { height: 220px; object-fit: cover; object-position: center; }
 .modal-box h3 { font-family: 'Oswald', sans-serif; font-size: 22px; color: var(--navy); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px; }
 .modal-box p { color: var(--muted); font-size: 14px; line-height: 1.8; }
 .modal-close { position: absolute; top: 14px; right: 16px; background: none; border: none; font-size: 20px; cursor: pointer; color: var(--muted); line-height: 1; }
@@ -409,7 +410,7 @@ footer a:hover { color: var(--gold); }
 <div id="modal-vattenfilter" class="modal" onclick="closeModal(event)">
   <div class="modal-box">
     <button class="modal-close" onclick="closeAllModals()">✕</button>
-    <img src="bild.png" alt="Vattenfilter JCA 10">
+    <img src="image4.png" alt="Vattenfilter JCA 10">
     <h3>JCA 10 – Järnfilter & pH-höjare</h3>
     <p>Vår villamodell JCA 10 höjer pH och filtrerar järn och mangan från ditt brunnsvatten. Enkel i drift och underhållning – en trotjänare sedan 30 år.</p>
   </div>
@@ -437,7 +438,7 @@ footer a:hover { color: var(--gold); }
 <div id="modal-ved" class="modal" onclick="closeModal(event)">
   <div class="modal-box">
     <button class="modal-close" onclick="closeAllModals()">✕</button>
-    <img src="image1.png" alt="Vedpanna">
+    <img src="image1.png" alt="Vedpanna" class="crop-center">
     <h3>Vedpannor & Pelletspannor</h3>
     <p>Ecodesign-godkända anläggningar med trygghetförsäkring upp till 16 år – Först i Sverige.</p>
   </div>
@@ -446,7 +447,7 @@ footer a:hover { color: var(--gold); }
 <div id="modal-vp" class="modal" onclick="closeModal(event)">
   <div class="modal-box">
     <button class="modal-close" onclick="closeAllModals()">✕</button>
-    <img src="image0.png" alt="Luft/Vatten-värmepump">
+    <img src="image0.png" alt="Luft/Vatten-värmepump" class="crop-center">
     <h3>Luft/Vatten-värmepumpar</h3>
     <p>Komplettera din befintliga anläggning med en värmepump. Trygghetförsäkring upp till 16 år ingår.</p>
   </div>
